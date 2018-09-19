@@ -6,6 +6,7 @@ export class JuegoCapital extends Juego {
     super('Adivina La Capital', gano, jugador);
   }
 
+
   public verificar() {
     if (true) {  // condicion
       this.gano = true;
@@ -18,4 +19,9 @@ export class JuegoCapital extends Juego {
       return false;
     }
   }
+
+
+
+
+
 }
