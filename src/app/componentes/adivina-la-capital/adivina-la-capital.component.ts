@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 import { JuegoAdivinaCapital } from '../../clases/juego-adivina-capital';
 
 
@@ -12,7 +12,6 @@ export class AdivinaLaCapitalComponent implements OnInit {
 
   nuevoJuego: JuegoAdivinaCapital;
   Mensajes: string;
-  public listadoDePaises: Array<any>;
 
   constructor() {
     this.nuevoJuego = new JuegoAdivinaCapital();
@@ -34,7 +33,7 @@ export class AdivinaLaCapitalComponent implements OnInit {
 
       this.MostarMensaje('¡PERDISTE!');
     }
-    console.log('numero Secreto:', this.nuevoJuego.gano);
+    console.log(this.nuevoJuego.gano);
   }
 
 
@@ -48,9 +47,6 @@ export class AdivinaLaCapitalComponent implements OnInit {
       } else {
         x.className = 'show Perdedor';
       }
-
-    // tslint:disable-next-line:prefer-const
-    let modelo = this;
 
     setTimeout(function() {
       x.className = x.className.replace('show', '');

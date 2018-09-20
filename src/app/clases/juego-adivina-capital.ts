@@ -1,12 +1,10 @@
 import { Juego } from './juego';
 import { PaisesService } from '../servicios/paises.service';
 
-
-
 export class JuegoAdivinaCapital extends Juego {
 
-  opcionCorrecta;
-  opcionElegida = 0;
+  opcionCorrecta = 'Ø';
+  opcionElegida = 'Ø';
   opciones = [];
 
   public listadoDePaises: Array<any>;
@@ -47,7 +45,7 @@ export class JuegoAdivinaCapital extends Juego {
       this.opciones.push(this.listadoDePaises[Math.floor((Math.random() * dim) + 1)]);
     }
 
-    this.opcionCorrecta = this.opciones[Math.floor((Math.random() * 4) + 1)];
+    this.opcionCorrecta = '' /*this.opciones[Math.floor((Math.random() * 4) + 1)]*/;
     this.gano = false;
   }
 }

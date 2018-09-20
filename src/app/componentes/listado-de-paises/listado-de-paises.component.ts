@@ -7,8 +7,10 @@ import { PaisesService } from '../../servicios/paises.service';
   styleUrls: ['./listado-de-paises.component.css']
 })
 export class ListadoDePaisesComponent implements OnInit {
+
   public listadoDePaises: Array<any>;
   miServicioDePaises: PaisesService;
+
   constructor( servicioPaises: PaisesService) {
     this.miServicioDePaises = servicioPaises;
    }
