@@ -1,5 +1,5 @@
-import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
-import { JuegoAdivina } from '../../clases/juego-adivina-numero';
+import { Component, OnInit, Output, EventEmitter} from '@angular/core';
+import { JuegoAdivinaNumero } from '../../clases/juego-adivina-numero';
 
 @Component({
   selector: 'app-adivina-el-numero',
@@ -10,13 +10,13 @@ import { JuegoAdivina } from '../../clases/juego-adivina-numero';
 export class AdivinaElNumeroComponent implements OnInit {
  @Output() enviarJuego: EventEmitter <any> = new EventEmitter<any>();
 
-  nuevoJuego: JuegoAdivina;
+  nuevoJuego: JuegoAdivinaNumero;
   Mensajes: string;
   contador: number;
   ocultarVerificar: boolean;
 
   constructor() {
-    this.nuevoJuego = new JuegoAdivina();
+    this.nuevoJuego = new JuegoAdivinaNumero();
     console.log('numero Secreto:', this.nuevoJuego.numeroSecreto);
     this.ocultarVerificar = false;
   }
@@ -68,6 +68,7 @@ export class AdivinaElNumeroComponent implements OnInit {
 
   MostarMensaje(mensaje: string = 'este es el mensaje', ganador: boolean = false) {
     this.Mensajes = mensaje;
+    // tslint:disable-next-line:prefer-const
     let x = document.getElementById('snackbar');
 
     if (ganador) {
@@ -76,6 +77,7 @@ export class AdivinaElNumeroComponent implements OnInit {
         x.className = 'show Perdedor';
       }
 
+    // tslint:disable-next-line:prefer-const
     let modelo = this;
 
     setTimeout(function() {

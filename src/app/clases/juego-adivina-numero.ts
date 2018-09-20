@@ -1,6 +1,6 @@
 import { Juego } from './juego';
 
-export class JuegoAdivina extends Juego {
+export class JuegoAdivinaNumero extends Juego {
   numeroSecreto: Number = 0;
   numeroIngresado = 0;
 
