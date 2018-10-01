@@ -1,25 +1,16 @@
-/*
 import { Juego } from './juego';
-import { PaisesService } from '../servicios/paises.service';
 
-export class JuegoAdivinaCapital extends Juego {
+export class JuegoAdivinaNumero extends Juego {
+  numeroSecreto: Number = 0;
+  numeroIngresado = 0;
 
-  opcionCorrecta = 'Ø';
-  opcionElegida = 'Ø';
-  opciones = [];
-
-  public listadoDePaises: Array<any>;
-  miServicioDePaises: PaisesService;
-
-  constructor(nombre?: string, gano?: boolean, jugador?: string, servicioPaises?: PaisesService) {
-    super('Adivina La Capital', gano, jugador);
-    this.miServicioDePaises = servicioPaises;
+  constructor(nombre?: string, gano?: boolean, jugador?: string) {
+    super('Adivina el número', gano, jugador);
   }
-
 
   public verificar() {
     // tslint:disable-next-line:triple-equals
-    if (this.opcionCorrecta == this.opcionElegida) {
+    if (this.numeroIngresado == this.numeroSecreto) {
       this.gano = true;
     }
 
@@ -31,23 +22,20 @@ export class JuegoAdivinaCapital extends Juego {
     }
   }
 
-  public generarOpcion() {
+  public generarnumero() {
 
-    this.miServicioDePaises.listar()
-    .then(datos => {
-      // tslint:disable-next-line:no-console
-      console.info('listado de paises', datos);
-      this.listadoDePaises = datos;
-    });
+    this.numeroSecreto = Math.floor((Math.random() * 100) + 1);
 
-    // tslint:disable-next-line:prefer-const
-    let dim = this.listadoDePaises.length;
-    for ( let i = 0 ; i < 3 ; i++  ) {
-      this.opciones.push(this.listadoDePaises[Math.floor((Math.random() * dim) + 1)]);
-    }
+    console.log('numero Secreto:' + this.numeroSecreto);
 
-    this.opcionCorrecta = '' // this.opciones[Math.floor((Math.random() * 4) + 1)];
     this.gano = false;
   }
+
+  public retornarAyuda() {
+    if (this.numeroIngresado < this.numeroSecreto) {
+      return 'Falta';
+    }
+
+    return 'Te pasate';
+  }
 }
-*/

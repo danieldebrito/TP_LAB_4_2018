@@ -31,6 +31,7 @@ import { MostrarPaisesComponent } from './component/games/mostrar-paises/mostrar
 import { GamesComponent } from './component/seccions/games/games.component';
 import { CardGamesComponent } from './component/seccions/card-games/card-games.component';
 import { QuienSoyComponent } from './component/seccions/quien-soy/quien-soy.component';
+import { AdivinaLaCapitalComponent } from './component/games/adivina-la-capital/adivina-la-capital.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { QuienSoyComponent } from './component/seccions/quien-soy/quien-soy.comp
     MostrarPaisesComponent,
     GamesComponent,
     CardGamesComponent,
-    QuienSoyComponent
+    QuienSoyComponent,
+    AdivinaLaCapitalComponent
   ],
   imports: [
     BrowserModule,
