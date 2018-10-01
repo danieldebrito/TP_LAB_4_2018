@@ -1,0 +1,45 @@
+<div>
+  <div>
+    <div class="button-row">
+      <button mat-flat-button color="primary">America</button>
+      &nbsp;
+      <button mat-flat-button color="primary">Europa </button>
+      <button mat-flat-button color="primary">Africa</button>
+      <button mat-flat-button color="primary">Ordenas Por Subregion</button>
+      <button mat-flat-button color="primary">Todos</button>
+    </div>
+  </div>
+
+  <div>
+    <h1>
+      Listado de paises
+    </h1>
+    <table class="table table-condensed">
+      <thead>
+        <tr>
+          <th>Pais</th>
+          <th>Región</th>
+          <th>Nombre local</th>
+          <th>Sub Región</th>
+          <th>Población</th>
+          <th>Bandera</th>
+          <th>Capital</th>
+          <th>GPS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let pais of listado">
+          <td>{{pais.name}} </td>
+          <td>{{pais.region}} </td>
+          <td>{{pais.nativeName}} </td>
+          <td>{{pais.subregion}} </td>
+          <td>{{pais.population}} </td>
+          <td><img src='{{pais.flag}}' width="50px" /> </td>
+          <td>{{pais.capital}} </td>
+          <td>{{pais.borders}} </td>
+          <td>{{pais.latlng}} </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
