@@ -1,5 +1,6 @@
-import { NgModule, Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 // secciones
 import { PageNotFoundComponent } from '../component/seccions/page-not-found/page-not-found.component';
@@ -25,12 +26,9 @@ const appRoutes: Routes = [
   { path: '**', component: PageNotFoundComponent }
 ];
 
-@Component({
-
-})
-
 @NgModule({
   imports: [
+    CommonModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
@@ -39,11 +37,7 @@ const appRoutes: Routes = [
   ],
   exports: [
     RouterModule
-  ]
+  ],
+  declarations: []
 })
-
-// tslint:disable-next-line:component-class-suffix
-export class RoutesModule { }
-
-
-
+export class AppRoutingModule { }

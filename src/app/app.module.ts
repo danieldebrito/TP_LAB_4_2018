@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 // rutas
-import { RoutesModule } from './routes/app.rutes';
+import { AppRoutingModule } from './routes/app-routing.module';
 
 // styles
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -58,7 +58,7 @@ import { AdivinaLaCapitalComponent } from './component/games/adivina-la-capital/
     BootstrapModule,
     PrimeNGModule,
     FormsModule,
-    RoutesModule,
+    AppRoutingModule,
     HttpModule
   ],
   providers: [],
