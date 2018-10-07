@@ -5,9 +5,13 @@
 }
 
 .jumbotron {
+    background-image: url("../../../../../assets/home.jpg");
     padding-top: 30px;
     position: sticky;
-    background: purple;
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .row img {
