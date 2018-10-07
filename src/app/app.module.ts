@@ -28,10 +28,10 @@ import { HomeComponent } from './component/seccions/home/home/home.component';
 import { PageNotFoundComponent } from './component/seccions/page-not-found/page-not-found.component';
 import { AdivinaElNumeroComponent } from './component/games/adivina-el-numero/adivina-el-numero.component';
 import { MostrarPaisesComponent } from './component/games/mostrar-paises/mostrar-paises.component';
-import { GamesComponent } from './component/seccions/games/games.component';
 import { CardGamesComponent } from './component/seccions/card-games/card-games.component';
 import { QuienSoyComponent } from './component/seccions/quien-soy/quien-soy.component';
 import { AdivinaLaCapitalComponent } from './component/games/adivina-la-capital/adivina-la-capital.component';
+import { GamesGridComponent } from './component/seccions/games-grid/games-grid.component';
 
 @NgModule({
   declarations: [
@@ -45,10 +45,10 @@ import { AdivinaLaCapitalComponent } from './component/games/adivina-la-capital/
     PageNotFoundComponent,
     AdivinaElNumeroComponent,
     MostrarPaisesComponent,
-    GamesComponent,
     CardGamesComponent,
     QuienSoyComponent,
-    AdivinaLaCapitalComponent
+    AdivinaLaCapitalComponent,
+    GamesGridComponent
   ],
   imports: [
     BrowserModule,

@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 // secciones
 import { PageNotFoundComponent } from '../component/seccions/page-not-found/page-not-found.component';
 import { HomeComponent } from '../component/seccions/home/home/home.component';
-import { GamesComponent } from '../component/seccions/games/games.component';
+import { GamesGridComponent } from '../component/seccions/games-grid/games-grid.component';
 import { QuienSoyComponent } from '../component/seccions/quien-soy/quien-soy.component';
 
 // juegos
@@ -14,9 +14,9 @@ import { MostrarPaisesComponent } from '../component/games/mostrar-paises/mostra
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'games', component: GamesComponent },
+  { path: 'games', component: GamesGridComponent },
   { path: 'p', component: MostrarPaisesComponent },
-  { path: 'adivinaNro', component: AdivinaElNumeroComponent },
+  { path: 'adivnro', component: AdivinaElNumeroComponent },
   { path: 'quien', component: QuienSoyComponent },
   {
     path: '',
