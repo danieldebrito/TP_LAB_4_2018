@@ -10,13 +10,16 @@ import { QuienSoyComponent } from '../component/seccions/quien-soy/quien-soy.com
 
 // juegos
 import { AdivinaElNumeroComponent } from '../component/games/adivina-el-numero/adivina-el-numero.component';
+import { AdivinaLaCapitalComponent } from '../component/games/adivina-la-capital/adivina-la-capital.component';
 import { MostrarPaisesComponent } from '../component/games/mostrar-paises/mostrar-paises.component';
+
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'games', component: GamesGridComponent },
   { path: 'p', component: MostrarPaisesComponent },
-  { path: 'adivnro', component: AdivinaElNumeroComponent },
+  { path: 'adivinaNumero', component: AdivinaElNumeroComponent },
+  { path: 'adivinaCapital', component: AdivinaLaCapitalComponent },
   { path: 'quien', component: QuienSoyComponent },
   {
     path: '',
