@@ -1,7 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { JuegoAdivinaNumero } from '../../../clases/juego-adivina-numero';
 import { PaisesTodosService } from '../../../services/paises-todos.service';
-
 
 @Component({
   selector: 'app-adivina-la-capital',
@@ -34,6 +32,7 @@ verificar(eleg: any) {
       .then(datos => {
         console.log('listado de paises', datos);
         this.listado = datos;
+
 
         for (let i = 0; i < 4 ; i++) {
           this.opciones.push(this.listado[Math.floor(Math.random() * (this.listado.length))]);

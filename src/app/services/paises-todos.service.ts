@@ -12,7 +12,6 @@ export class PaisesTodosService {
   public listar(): Promise<Array<any>> {
     return this.miHttp.httpGetP('all')
       .then(data => {
-        console.log(data);
         return data;
       })
       .catch(err => {
