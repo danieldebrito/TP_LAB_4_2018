@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { PaisesTodosService } from '../../../services/paises-todos.service';
+import { Pais } from '../../../class/pais';
 
 @Component({
   selector: 'app-adivina-la-capital',
@@ -7,6 +8,8 @@ import { PaisesTodosService } from '../../../services/paises-todos.service';
   styleUrls: ['./adivina-la-capital.component.css']
 })
 export class AdivinaLaCapitalComponent implements OnInit {
+
+  public paisesTodos: Array<Pais>;
 
   public listado = [];
   public opciones = [];
