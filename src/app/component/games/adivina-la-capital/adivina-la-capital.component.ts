@@ -38,8 +38,11 @@ verificar(eleg: any) {
         for (let i = 0; i < 4 ; i++) {
           this.opciones.push(this.listado[Math.floor(Math.random() * (this.listado.length))]);
         }
-
+  
         this.correcto = this.opciones[Math.floor(Math.random() * (4))];
       });
+
+
+
   }
 }
