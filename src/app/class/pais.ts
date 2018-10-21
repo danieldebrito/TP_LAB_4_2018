@@ -1,15 +1,10 @@
 export class Pais {
-    id: Number;
-    nombrePais: string;
-    capital: string;
-    banderaUrl: string;
-
-    constructor(id: Number, nombrePais: string, capital: string, banderaUrl: string) {
-      this.id = id;
-      this.nombrePais = nombrePais;
-      this.capital = capital;
-      this.banderaUrl = banderaUrl;
-    }
-
-
+    constructor(
+      public pais: string,
+      public paisEng: string,
+      public capital: string,
+      public codigo: string,
+      public bandera: string,
+      public poblacion: number
+    ) { }
 }
