@@ -11,16 +11,22 @@ export class AdivinaLaCapitalComponent implements OnInit {
 
   public nombreJuego = 'Adivina Capital';
   public items: Pais[];
-  public opciones: Pais[];
+  public opciones = [];
   public correcto: Pais;
   public elegida: Pais;
+  public msg: string;
 
   constructor(
     private _allItemsService: ApiHttpService
   ) { }
 
-verificar() {
-}
+  verificar(eleg: Pais) {
+    if (eleg === this.correcto) {
+      this.msg = 'win!!!!';
+    } else {
+      this.msg = 'nooo';
+    }
+  }
 
 
   ngOnInit() {
@@ -31,6 +37,12 @@ verificar() {
           console.log(result);
         } else {  // si no hay error
           this.items = result.data;
+
+          for (let i = 0; i < 4; i++) {
+            this.opciones.push(this.items[Math.floor(Math.random() * (this.items.length))]);
+          }
+
+          this.correcto = this.opciones[Math.floor(Math.random() * (4))];
         }
       },
       error => {
@@ -38,10 +50,5 @@ verificar() {
       }
     );
 
-    for (let i = 0; i < 4 ; i++) {
-      this.opciones.push(this.items[Math.floor(Math.random() * (this.items.length))]);
-    }
-
-    this.correcto = this.opciones[Math.floor(Math.random() * (4))];
   }
 }
