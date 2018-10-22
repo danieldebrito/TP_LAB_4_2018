@@ -1,5 +1,5 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { PaisesTodosService } from '../../../services/paises-todos.service';
+import { Component, OnInit } from '@angular/core';
+import { ApiHttpService } from '../../../services/paises/api-http.service';
 import { Pais } from '../../../class/pais';
 
 @Component({
@@ -9,42 +9,39 @@ import { Pais } from '../../../class/pais';
 })
 export class AdivinaLaCapitalComponent implements OnInit {
 
-  public paisesTodos: Array<Pais>;
+  public nombreJuego = 'Adivina Capital';
+  public items: Pais[];
+  public opciones: Pais[];
+  public correcto: Pais;
+  public elegida: Pais;
 
-  public listado = [];
-  public opciones = [];
-  public correcto: any;
-  public elegida: any;
+  constructor(
+    private _allItemsService: ApiHttpService
+  ) { }
 
-  miServicioDePaises: PaisesTodosService  ;
-
-  constructor(servicioPaises: PaisesTodosService) {
-    this.miServicioDePaises = servicioPaises;
-  }
-
-verificar(eleg: any) {
-  if (eleg === this.correcto) {
-    return true;
-  }
-    return false;
+verificar() {
 }
 
 
   ngOnInit() {
-    this.miServicioDePaises.listar()
-      .then(datos => {
-        console.log('listado de paises', datos);
-        this.listado = datos;
 
-
-        for (let i = 0; i < 4 ; i++) {
-          this.opciones.push(this.listado[Math.floor(Math.random() * (this.listado.length))]);
+    this._allItemsService.getAllItems().subscribe(
+      result => {
+        if (result.code !== 200) {
+          console.log(result);
+        } else {  // si no hay error
+          this.items = result.data;
         }
-  
-        this.correcto = this.opciones[Math.floor(Math.random() * (4))];
-      });
+      },
+      error => {
+        console.log(<any>error);
+      }
+    );
 
+    for (let i = 0; i < 4 ; i++) {
+      this.opciones.push(this.items[Math.floor(Math.random() * (this.items.length))]);
+    }
 
-
+    this.correcto = this.opciones[Math.floor(Math.random() * (4))];
   }
 }

@@ -1,5 +1,6 @@
 export class Pais {
     constructor(
+      public id: number,
       public pais: string,
       public paisEng: string,
       public capital: string,

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PaisesTodosService } from '../../../services/paises-todos.service';
+import { PaisesTodosService } from '../../../services/HTTP/paises-todos.service';
 
 @Component({
   selector: 'app-mostrar-paises',
