@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnagramaComponent implements OnInit {
 
+  public nombreJuego = 'Anagrama';
+
+
   constructor() { }
 
-  ngOnInit() {
-  }
+  verificar() { }
 
+  reload() { }
+
+  ngOnInit() {
+    this.reload();
+  }
 }

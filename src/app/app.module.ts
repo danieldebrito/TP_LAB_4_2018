@@ -33,6 +33,9 @@ import { QuienSoyComponent } from './component/seccions/quien-soy/quien-soy.comp
 import { AdivinaLaCapitalComponent } from './component/games/adivina-la-capital/adivina-la-capital.component';
 import { GamesGridComponent } from './component/seccions/games-grid/games-grid.component';
 import { AnagramaComponent } from './component/games/anagrama/anagrama.component';
+import { PptComponent } from './component/games/ppt/ppt.component';
+import { TatetiComponent } from './component/games/tateti/tateti.component';
+import { AgilidadAritmeticaComponent } from './component/games/agilidad-aritmetica/agilidad-aritmetica.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +53,10 @@ import { AnagramaComponent } from './component/games/anagrama/anagrama.component
     QuienSoyComponent,
     AdivinaLaCapitalComponent,
     GamesGridComponent,
-    AnagramaComponent
+    AnagramaComponent,
+    PptComponent,
+    TatetiComponent,
+    AgilidadAritmeticaComponent
   ],
   imports: [
     BrowserModule,
