@@ -32,6 +32,7 @@ import { CardGamesComponent } from './component/seccions/card-games/card-games.c
 import { QuienSoyComponent } from './component/seccions/quien-soy/quien-soy.component';
 import { AdivinaLaCapitalComponent } from './component/games/adivina-la-capital/adivina-la-capital.component';
 import { GamesGridComponent } from './component/seccions/games-grid/games-grid.component';
+import { AnagramaComponent } from './component/games/anagrama/anagrama.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { GamesGridComponent } from './component/seccions/games-grid/games-grid.c
     CardGamesComponent,
     QuienSoyComponent,
     AdivinaLaCapitalComponent,
-    GamesGridComponent
+    GamesGridComponent,
+    AnagramaComponent
   ],
   imports: [
     BrowserModule,

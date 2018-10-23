@@ -9,7 +9,7 @@ import { Pais } from '../../../class/pais';
 })
 export class AdivinaLaCapitalComponent implements OnInit {
 
-  public nombreJuego = 'Adivina Capital';
+  public nombreJuego = 'Adivina la Capital';
   public items: Pais[];
   public opciones = [];
   public correcto: Pais;
@@ -22,21 +22,22 @@ export class AdivinaLaCapitalComponent implements OnInit {
 
   verificar(eleg: Pais) {
     if (eleg === this.correcto) {
-      this.msg = 'win!!!!';
+      this.msg = 'GANASTE !!, Correcto es  ' + this.correcto.capital;
     } else {
-      this.msg = 'nooo';
+      this.msg = 'PERDISTE !!, es:  ' + this.correcto.capital;
     }
   }
 
-
-  ngOnInit() {
-
+  reload() {
     this._allItemsService.getAllItems().subscribe(
       result => {
         if (result.code !== 200) {
           console.log(result);
         } else {  // si no hay error
           this.items = result.data;
+
+          this.opciones = [];
+          this.msg = '';
 
           for (let i = 0; i < 4; i++) {
             this.opciones.push(this.items[Math.floor(Math.random() * (this.items.length))]);
@@ -49,6 +50,9 @@ export class AdivinaLaCapitalComponent implements OnInit {
         console.log(<any>error);
       }
     );
+  }
 
+  ngOnInit() {
+    this.reload();
   }
 }
