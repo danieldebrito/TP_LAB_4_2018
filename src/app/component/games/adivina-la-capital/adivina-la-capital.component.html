@@ -1,15 +1,14 @@
 <div class="row">
   <div class="col-sm-8">
-
     <h1> {{ nombreJuego }} {{ msg }} </h1>
 
     <hr>
 
     <div class="correcto">
-
       <h1> ¿ Cual es la Capital de {{ correcto?.pais }} ? </h1>
-      <img src='{{ correcto?.bandera }}' height="90px" width="150px" />
+      <img src='{{ correcto?.bandera }}' />
     </div>
+
     <br>
 
     <div class="grid">
@@ -26,13 +25,11 @@
   </div>
 
   <div class="col-sm-4">
-
     <br>
     <button (click)="reload()">Volver a jugar</button>
     <button routerLink="/home">Inicio</button>
     <hr>
 
     <app-aside></app-aside>
-
   </div>
 </div>

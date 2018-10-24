@@ -16,18 +16,25 @@ import { AnagramaComponent } from '../component/games/anagrama/anagrama.componen
 import { PptComponent } from '../component/games/ppt/ppt.component';
 import { TatetiComponent } from '../component/games/tateti/tateti.component';
 import { AgilidadAritmeticaComponent } from '../component/games/agilidad-aritmetica/agilidad-aritmetica.component';
+import { RegistroComponent } from '../component/seccions/usuarios/registro/registro.component';
+
 
 const appRoutes: Routes = [
+  // secciones
   { path: 'home', component: HomeComponent },
   { path: 'games', component: GamesGridComponent },
   { path: 'p', component: MostrarPaisesComponent },
+  { path: 'quien', component: QuienSoyComponent },
+  // usr
+  { path: 'registro', component: RegistroComponent },
+  // games
   { path: 'adivinaNumero', component: AdivinaElNumeroComponent },
   { path: 'adivinaCapital', component: AdivinaLaCapitalComponent },
   { path: 'anagrama', component: AnagramaComponent },
   { path: 'ppt', component: PptComponent },
   { path: 'tateti', component: TatetiComponent },
   { path: 'aritmetica', component: AgilidadAritmeticaComponent },
-  { path: 'quien', component: QuienSoyComponent },
+
   {
     path: '',
     redirectTo: '/home',

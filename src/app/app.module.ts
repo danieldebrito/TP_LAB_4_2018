@@ -37,6 +37,8 @@ import { AnagramaComponent } from './component/games/anagrama/anagrama.component
 import { PptComponent } from './component/games/ppt/ppt.component';
 import { TatetiComponent } from './component/games/tateti/tateti.component';
 import { AgilidadAritmeticaComponent } from './component/games/agilidad-aritmetica/agilidad-aritmetica.component';
+import { RegistroComponent } from './component/seccions/usuarios/registro/registro.component';
+import { LoginComponent } from './component/seccions/usuarios/login/login.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +59,9 @@ import { AgilidadAritmeticaComponent } from './component/games/agilidad-aritmeti
     AnagramaComponent,
     PptComponent,
     TatetiComponent,
-    AgilidadAritmeticaComponent
+    AgilidadAritmeticaComponent,
+    RegistroComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

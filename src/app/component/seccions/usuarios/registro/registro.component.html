@@ -1,0 +1,61 @@
+
+<div class="titulo">
+    <h3>Registro de usuario</h3>
+</div>
+
+<div class="formulario">
+
+    <form #formUser="ngForm" (ngSubmit)="onSubmit()" class="form-usr col-lg-6">
+        <label>
+          Nombre
+              <p *ngIf="!nombre.valid && nombre.touched">
+                  <ngb-alert [dismissible]="false">
+                    <strong>Atencion!</strong> El nombre es requerido.
+                  </ngb-alert>
+                </p>
+        </label>
+        <input type="text" #nombre="ngModel" name="nombre" [(ngModel)]="usuario.nombre" class="form-control" required>
+        
+
+        <label>
+          e-mail
+          <p *ngIf="!email.valid && email.touched">
+              <ngb-alert [dismissible]="false">
+                <strong>Atencion!</strong> El e-mail es requerido.
+              </ngb-alert>
+            </p>
+          </label>
+        <input type="email" #email="ngModel" name="email" [(ngModel)]="usuario.e-mail" class="form-control" required>
+      
+        <label>
+          Contraseña
+          <p *ngIf="!pass.valid && pass.touched">
+              <ngb-alert [dismissible]="false">
+                <strong>Atencion!</strong> El password es requerido.
+              </ngb-alert>
+            </p>
+          </label>
+        <input type="password" #pass="ngModel" name="pass" [(ngModel)]="usuario.pass" class="form-control" required>
+
+        <label>
+          Tipo
+          <p *ngIf="!tipo.valid && tipo.touched">
+              <ngb-alert [dismissible]="false">
+                <strong>Atencion!</strong> El tipo es requerido.
+              </ngb-alert>
+            </p>
+        </label>
+        <input type="text" #tipo="ngModel" name="tipo" [(ngModel)]="usuario.tipo" class="form-control" required>
+      
+        <label>Avatar</label>
+        <input type="file" class="form-control">
+        
+        <br>
+
+        <input type="submit" [disabled]="!formUser.form.valid" value="Crear Usuario" class="btn btn-sucess"/>
+      </form>
+
+      <br>
+      
+</div>
+
