@@ -1,5 +1,3 @@
-
-
 .correcto {
   text-align: center;
 }
@@ -10,4 +8,9 @@ img {
 
 .col-sm-6 {
   text-align: center;
+}
+
+.grid {
+  margin-left: 10%;
+  margin-right: 10%;
 }

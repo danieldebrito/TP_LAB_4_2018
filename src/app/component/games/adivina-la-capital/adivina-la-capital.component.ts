@@ -22,9 +22,9 @@ export class AdivinaLaCapitalComponent implements OnInit {
 
   verificar(eleg: Pais) {
     if (eleg === this.correcto) {
-      this.msg = 'GANASTE !!, Correcto es  ' + this.correcto.capital;
+      this.msg = 'GANASTE!!, es  ' + this.correcto.capital;
     } else {
-      this.msg = 'PERDISTE !!, es:  ' + this.correcto.capital;
+      this.msg = 'PERDISTE!!, es:  ' + this.correcto.capital;
     }
   }
 

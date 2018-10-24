@@ -1,19 +1,38 @@
-<h1> {{ nombreJuego }} {{ msg }}</h1>
-
-<button (click)="reload()">Volver a jugar</button>
-
-<hr>
-
-<div class="correcto">
-
-  <h1> ¿ Cual es la Capital de {{ correcto?.pais }} ? </h1>
-  <img src='{{ correcto?.bandera }}' width="150px" />
-</div>
-
 <div class="row">
-  <div class="col-sm-6" *ngFor="let item of opciones">
-    <br><br>
-    <p> <strong>{{ item.capital }}</strong></p>
-    <button (click)='verificar(item)'>Elegir</button><br><br>
+  <div class="col-sm-8">
+
+    <h1> {{ nombreJuego }} {{ msg }} </h1>
+
+    <hr>
+
+    <div class="correcto">
+
+      <h1> ¿ Cual es la Capital de {{ correcto?.pais }} ? </h1>
+      <img src='{{ correcto?.bandera }}' height="90px" width="150px" />
+    </div>
+    <br>
+
+    <div class="grid">
+      <div class="row">
+        <div class="col-sm-6 col-xs-6 border border-danger" *ngFor="let item of opciones">
+          <br><br>
+          <p> <strong>{{ item.capital }}</strong></p>
+          <button (click)='verificar(item)'>Elegir</button><br><br>
+        </div>
+      </div>
+    </div>
+
+    <br>
+  </div>
+
+  <div class="col-sm-4">
+
+    <br>
+    <button (click)="reload()">Volver a jugar</button>
+    <button routerLink="/home">Inicio</button>
+    <hr>
+
+    <app-aside></app-aside>
+
   </div>
 </div>

@@ -15,6 +15,7 @@ import { BootstrapModule } from './styles/ngBootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './styles/material';
 import { PrimeNGModule } from './styles/primeNG';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 // layout
 import { NavbarComponent } from './component/layout/navbar/navbar.component';
@@ -67,7 +68,8 @@ import { AgilidadAritmeticaComponent } from './component/games/agilidad-aritmeti
     PrimeNGModule,
     FormsModule,
     AppRoutingModule,
-    HttpModule
+    HttpModule,
+    AngularFontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

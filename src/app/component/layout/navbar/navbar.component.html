@@ -1,17 +1,27 @@
 <!-- nav bar bootstrap -->
 
-<nav class="navbar navbar-expand-md navbar-dark bg-danger fixed-top">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top">
 
-    <a class="navbar-brand myLogo img-responsive" routerLink="/home"><img src="../../../../assets/logo.png"/></a>
-  
-  <button class="navbar-toggler hidden-sm-up" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
+  <a class="navbar-brand myLogo img-responsive" routerLink="/home"><img src="../../../../assets/logo.png" /></a>
+
+  <button class="navbar-toggler hidden-sm-up" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed"
+    data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbarsDefault">
     <ul class="navbar-nav mr-auto">
+      <li>
+        <a class="nav-link" routerLink="/home">
+          <i class="fas fa-home"></i>
+          Inicio
+        </a>
+      </li>
       <li class="nav-item dropdown" ngbDropdown>
-        <a class="nav-link dropdown-toggle" id="id01" ngbDropdownToggle>Juegos</a>
+        <a class="nav-link dropdown-toggle" id="id01" ngbDropdownToggle>
+          <i class="fas fa-gamepad"></i>
+          Juegos
+        </a>
         <div class="dropdown-menu" aria-labelledby="id01" ngbDropdownMenu>
           <a class="dropdown-item" routerLink="/adivinaCapital">Adivina Capital</a>
           <a class="dropdown-item" routerLink="/adivinaNumero">Adivina Numero</a>
@@ -20,6 +30,18 @@
           <a class="dropdown-item" routerLink="/ppt">Piedra Papel o Tijera</a>
           <a class="dropdown-item" routerLink="/tateti">Ta-Te-Ti</a>
         </div>
+      </li>
+      <li>
+        <a class="nav-link" routerLink="/home">
+          <i class="fas fa-clipboard-list"></i>
+          Resultados
+        </a>
+      </li>
+      <li>
+        <a class="nav-link" routerLink="/home">
+          <i class="fas fa-edit"></i>
+          Configuracion
+        </a>
       </li>
     </ul>
   </div>
