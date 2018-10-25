@@ -28,8 +28,8 @@ export class RegistroComponent implements OnInit {
     console.log(this.usuario);
 
     this._service.uploadFile(this._service.url + 'upload-file', [], this.filesToUpload).then((result) => {
-      console.log(result.filename);
-      this.usuario.avatar = result.filename;
+      console.log(result);
+      this.usuario.avatar = 'poner el filename, ver!!!!!!!!';
 
     }, (error) => {
       console.log( error );
