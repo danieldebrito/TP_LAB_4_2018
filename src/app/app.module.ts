@@ -3,8 +3,10 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 
+
 // services
 import { HttpModule } from '@angular/http';
+import {HttpClientModule} from '@angular/common/http';
 
 // rutas
 import { AppRoutingModule } from './routes/app-routing.module';
@@ -73,6 +75,7 @@ import { LoginComponent } from './component/seccions/usuarios/login/login.compon
     FormsModule,
     AppRoutingModule,
     HttpModule,
+    HttpClientModule,
     AngularFontAwesomeModule
   ],
   providers: [],

@@ -19,13 +19,13 @@
 
         <label>
           e-mail
-          <p *ngIf="!email.valid && email.touched">
+          <p *ngIf="!mail.valid && mail.touched">
               <ngb-alert [dismissible]="false">
                 <strong>Atencion!</strong> El e-mail es requerido.
               </ngb-alert>
             </p>
           </label>
-        <input type="email" #email="ngModel" name="email" [(ngModel)]="usuario.e-mail" class="form-control" required>
+        <input type="email" #mail="ngModel" name="mail" [(ngModel)]="usuario.mail" class="form-control" required>
       
         <label>
           Contraseña
@@ -48,7 +48,7 @@
         <input type="text" #tipo="ngModel" name="tipo" [(ngModel)]="usuario.tipo" class="form-control" required>
       
         <label>Avatar</label>
-        <input type="file" class="form-control">
+        <input type="file" class="form-control" (change)="fileChangeEvent($event)" >
         
         <br>
 

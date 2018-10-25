@@ -5,6 +5,7 @@ export class User {
       public mail: string,
       public pass: string,
       public tipo: string,
-      public avatar: string
+      public avatar: string,
+      public puntaje: number
     ) { }
 }
